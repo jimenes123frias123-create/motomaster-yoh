@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotoMaster YOH | Refaccionaria y Taller de Motocicletas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="topbar">
+    <span>🏍️ Envíos a todo México y recolección gratis en taller (Villahermosa, Tabasco)</span>
+    <span>🔒 Compra Segura SSL | Cupón 10% DTO: <strong>MOTOYOH10</strong></span>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="navbar">
+    <a href="#" class="brand" data-view="inicio">🏍️ MotoMaster <span>YOH</span></a>
+
+    <div class="search-wrapper">
+      <input type="text" id="global-search" placeholder="Buscar refacciones, aceites, cascos, marca o SKU..." autocomplete="off" />
+      <div id="autocomplete-results" class="autocomplete-list"></div>
+    </div>
+
+    <nav class="nav-links">
+      <button class="nav-btn active" data-view="inicio">Inicio</button>
+      <button class="nav-btn" data-view="catalogo">Catálogo</button>
+      <button class="nav-btn" data-view="cuenta" id="nav-cuenta-btn">Mi Cuenta</button>
+      <button class="nav-btn" data-view="soporte">Atención al Cliente</button>
+      <button class="cart-trigger" id="btn-open-cart">
+        🛒 Carrito <span class="badge-count" id="cart-badge">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ==================== 1. PÁGINA DE INICIO ==================== -->
+  <main id="view-inicio" class="view-section active">
+    <section class="hero">
+      <div>
+        <span class="hero-tag">REFACCIONARIA Y SERVICIO TÉCNICO ESPECIALIZADO</span>
+        <h1>Todo para mantener tu motocicleta al máximo rendimiento</h1>
+        <p>Refacciones originales, lubricantes sintéticos, llantas y equipamiento certificado DOT con inventario en tiempo real y envío rápido.</p>
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+          <button class="btn-primary" data-view="catalogo">Ver Catálogo Completo</button>
+          <button class="btn-outline" style="color:#fff; border-color:#475569;" data-view="soporte">Cotizar Servicio de Taller</button>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06); padding:1.5rem; border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
+        <h3 style="margin-bottom:0.6rem; color:#fda4af;">⚡ Oferta Relámpago de la Semana</h3>
+        <p style="font-size:0.92rem; margin-bottom:1rem;">Usa el código <strong>MOTOYOH10</strong> en tu carrito y obtén 10% de descuento inmediato en refacciones y lubricantes.</p>
+        <div style="font-size:0.85rem; color:#94a3b8;">✔ Envío gratis en compras mayores a $1,500 MXN<br>✔ Entrega local exprés en Tabasco (CP 86xxx)</div>
+      </div>
+    </section>
+
+    <h2 class="section-title">Categorías Principales</h2>
+    <div class="categories-grid">
+      <div class="cat-card" data-cat="Lubricantes y Químicos">
+        <div class="cat-icon">🛢️</div>
+        <h3>Lubricantes y Químicos</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Aceites 4T, líquidos de freno y limpiadores</p>
+      </div>
+      <div class="cat-card" data-cat="Equipamiento y Seguridad">
+        <div class="cat-icon">🪖</div>
+        <h3>Equipamiento y Seguridad</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Cascos certificados DOT, guantes e impermeables</p>
+      </div>
+      <div class="cat-card" data-cat="Llantas y Rines">
+        <div class="cat-icon">🛞</div>
+        <h3>Llantas y Rines</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Llantas deportivas, doble propósito y reparto</p>
+      </div>
+      <div class="cat-card" data-cat="Refacciones de Motor">
+        <div class="cat-icon">⚙️</div>
+        <h3>Refacciones de Motor</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Kits de arrastre, bujías, filtros y balatas</p>
+      </div>
+    </div>
+
+    <div class="section-title">
+      <span>Productos Destacados y Ofertas</span>
+      <button class="btn-outline" data-view="catalogo">Ver todos →</button>
+    </div>
+    <div id="featured-products" class="products-grid">
+      <p>Cargando productos desde Supabase...</p>
+    </div>
+
+    <!-- ELEMENTOS DE CONFIANZA -->
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span style="font-size:1.6rem;">🚚</span>
+        <div><strong>Envíos Asegurados</strong><span>Paquetería nacional y entrega local en Tabasco</span></div>
+      </div>
+      <div class="trust-item">
+        <span style="font-size:1.6rem;">🛡️</span>
+        <div><strong>Pago 100% Protegido</strong><span>Cifrado SSL, SPEI, Mercado Pago y OXXO</span></div>
+      </div>
+      <div class="trust-item">
+        <span style="font-size:1.6rem;">🔧</span>
+        <div><strong>Garantía de Taller</strong><span>Piezas verificadas por mecánicos expertos</span></div>
+      </div>
+      <div class="trust-item">
+        <span style="font-size:1.6rem;">↩️</span>
+        <div><strong>Devolución Fácil</strong><span>Cambios sin costo por talla o compatibilidad</span></div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIOS -->
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="categories-grid">
+      <div class="card-box" style="margin:0;">
+        <div style="color:var(--accent); margin-bottom:0.4rem;">★★★★★</div>
+        <p style="font-size:0.9rem; margin-bottom:0.6rem;">"Pedí mi kit de arrastre y aceite Motul en la mañana y pasé a recogerlo al taller en Villahermosa sin hacer fila."</p>
+        <strong style="font-size:0.85rem;">— Carlos M. (Repartidor DiDi Moto)</strong>
+      </div>
+      <div class="card-box" style="margin:0;">
+        <div style="color:var(--accent); margin-bottom:0.4rem;">★★★★★</div>
+        <p style="font-size:0.9rem; margin-bottom:0.6rem;">"Excelente atención. Me ayudaron a elegir la medida exacta de llanta Pirelli para mi moto y llegó en 2 días."</p>
+        <strong style="font-size:0.85rem;">— Fernanda R. (Cárdenas, Tab.)</strong>
+      </div>
+      <div class="card-box" style="margin:0;">
+        <div style="color:var(--accent); margin-bottom:0.4rem;">★★★★★</div>
+        <p style="font-size:0.9rem; margin-bottom:0.6rem;">"El casco Kov Thunder llegó sellado y con factura CFDI al instante. Muy recomendada la tienda en línea."</p>
+        <strong style="font-size:0.85rem;">— Jorge L. (Mérida, Yuc.)</strong>
+      </div>
+    </div>
+
+    <!-- NEWSLETTER SIGNUP -->
+    <div class="card-box" style="background:var(--dark-900); color:#fff; margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <h3 style="margin-bottom:0.3rem;">📩 Únete al Club MotoMaster YOH</h3>
+        <p style="font-size:0.9rem; color:#cbd5e1;">Recibe promociones exclusivas, recordatorios de afinación y cupones de descuento.</p>
+      </div>
+      <form id="newsletter-form" style="display:flex; gap:0.5rem; flex:1; max-width:420px;">
+        <input type="email" id="newsletter-email" placeholder="Tu correo electrónico..." required style="background:#fff; color:#000;" />
+        <button type="submit" class="btn-primary">Suscribirme</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ==================== 2. CATÁLOGO DE PRODUCTOS ==================== -->
+  <section id="view-catalogo" class="view-section">
+    <h2 class="section-title">Catálogo de Refacciones y Accesorios</h2>
+    <div class="catalog-layout">
+      <!-- PANEL DE FILTROS AVANZADOS -->
+      <aside class="filters-panel">
+        <div class="filter-group">
+          <h4>Categoría</h4>
+          <select id="filter-categoria">
+            <option value="">Todas las categorías</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <h4>Subcategoría</h4>
+          <select id="filter-subcategoria">
+            <option value="">Todas las subcategorías</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <h4>Marca</h4>
+          <select id="filter-marca">
+            <option value="">Todas las marcas</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <h4>Precio máximo: <span id="precio-max-label" style="color:var(--primary);">$5,000</span></h4>
+          <input type="range" id="filter-precio-max" min="100" max="5000" step="50" value="5000" />
+        </div>
+        <div class="filter-group" style="border:none; margin-bottom:0.5rem;">
+          <label style="display:flex; align-items:center; gap:0.5rem; font-size:0.9rem; cursor:pointer;">
+            <input type="checkbox" id="filter-solo-stock" style="width:auto;" />
+            Solo productos disponibles
+          </label>
+        </div>
+        <button class="btn-outline" id="btn-reset-filtros" style="width:100%;">Limpiar Filtros</button>
+      </aside>
+
+      <!-- LISTADO Y CONTROLES -->
+      <div>
+        <div class="catalog-toolbar">
+          <span id="catalog-count" style="font-weight:600; font-size:0.92rem;">Mostrando 0 productos</span>
+          <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+            <select id="sort-select" style="width:auto; padding:0.45rem 0.75rem;">
+              <option value="popularidad">Ordenar: Más populares</option>
+              <option value="novedad">Ordenar: Más recientes</option>
+              <option value="precio-asc">Precio: Menor a Mayor</option>
+              <option value="precio-desc">Precio: Mayor a Menor</option>
+            </select>
+            <button class="btn-outline" id="btn-view-grid" title="Vista Parrilla">⊞ Parrilla</button>
+            <button class="btn-outline" id="btn-view-list" title="Vista Lista">☰ Lista</button>
+          </div>
+        </div>
+
+        <div id="catalog-products" class="products-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. PROCESO DE CHECKOUT ==================== -->
+  <section id="view-checkout" class="view-section">
+    <h2 class="section-title">Finalizar Compra (Checkout Seguro)</h2>
+    <div id="checkout-user-banner" class="card-box" style="background:#eff6ff; border-color:#bfdbfe; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.6rem;">
+      <span>Estás comprando como <strong>Invitado</strong>. ¿Tienes cuenta? Inicia sesión para autocompletar tus datos y guardar el historial.</span>
+      <button class="btn-secondary" data-view="cuenta">Iniciar Sesión</button>
+    </div>
+
+    <div id="checkout-confirmation" class="card-box" style="display:none; border-left:5px solid var(--success); background:#ecfdf5;"></div>
+
+    <form id="checkout-form" class="checkout-grid">
+      <div>
+        <div class="card-box">
+          <h3 style="margin-bottom:1rem;">1. Datos de Contacto y Envío</h3>
+          <div class="form-row">
+            <div>
+              <label style="font-size:0.85rem; font-weight:600;">Nombre Completo *</label>
+              <input type="text" id="chk-nombre" required placeholder="Ej. Henrry Jiménez" />
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600;">Correo Electrónico *</label>
+              <input type="email" id="chk-email" required placeholder="correo@ejemplo.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label style="font-size:0.85rem; font-weight:600;">Teléfono / WhatsApp *</label>
+              <input type="tel" id="chk-telefono" required placeholder="993 000 0000" />
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600;">Código Postal *</label>
+              <input type="text" id="chk-cp" maxlength="5" required placeholder="86000" />
+            </div>
+          </div>
+          <div style="margin-bottom:0.9rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Dirección Completa (Calle, Número, Colonia, Ciudad, Estado) *</label>
+            <input type="text" id="chk-direccion" required placeholder="Av. Universidad #120, Col. Magisterial, Villahermosa, Tabasco" />
+          </div>
+          <div>
+            <label style="font-size:0.85rem; font-weight:600;">Modalidad de Entrega</label>
+            <select id="chk-envio-tipo">
+              <option value="Estándar Nacional ($149)">Envío Estándar Nacional Paquetería ($149.00 MXN)</option>
+              <option value="Local Tabasco ($60)">Envío Exprés Local Villahermosa / Tabasco ($60.00 MXN)</option>
+              <option value="Click & Collect Taller ($0)">Recoger en Taller MotoMaster YOH - Villahermosa ($0.00 MXN)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="card-box">
+          <h3 style="margin-bottom:1rem;">2. Método de Pago Seguro (SSL / PCI-DSS)</h3>
+          <label class="payment-option">
+            <input type="radio" name="metodo_pago" value="Tarjeta Crédito/Débito (SSL / 3D Secure)" checked />
+            <span>💳 <strong>Tarjeta de Crédito o Débito</strong> (Cifrado SSL + Autenticación 3D Secure)</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="metodo_pago" value="Transferencia Electrónica SPEI" />
+            <span>🏦 <strong>Transferencia Bancaria SPEI</strong> (Acreditación inmediata sin comisión)</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="metodo_pago" value="Mercado Pago Checkout" />
+            <span>🤝 <strong>Mercado Pago</strong> (Saldo, tarjetas y meses sin intereses)</span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="metodo_pago" value="Pago en Efectivo OXXO" />
+            <span>🏪 <strong>Pago en Efectivo en Tiendas OXXO</strong> (Referencia digital instantánea)</span>
+          </label>
+          <div id="payment-details-box" style="background:#f8fafc; padding:0.9rem; border-radius:8px; font-size:0.88rem; color:var(--dark-700); margin-top:0.6rem;">
+            🔒 Serás conectado mediante túnel cifrado TLS 1.3. MotoMaster YOH nunca almacena los dígitos de tu tarjeta.
+          </div>
+        </div>
+
+        <div class="card-box">
+          <label style="display:flex; align-items:flex-start; gap:0.6rem; font-size:0.88rem; cursor:pointer;">
+            <input type="checkbox" required style="width:auto; margin-top:3px;" />
+            <span>He leído y acepto las <a href="#" class="open-legal" data-doc="envios" style="color:var(--primary); text-decoration:underline;">Políticas de Envío y Devolución</a>, los <a href="#" class="open-legal" data-doc="terminos" style="color:var(--primary); text-decoration:underline;">Términos y Condiciones</a> y el <a href="#" class="open-legal" data-doc="privacidad" style="color:var(--primary); text-decoration:underline;">Aviso de Privacidad</a>.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- RESUMEN DEL PEDIDO -->
+      <div>
+        <div class="card-box" style="position:sticky; top:90px;">
+          <h3 style="margin-bottom:1rem;">Resumen del Pedido</h3>
+          <div id="checkout-summary-items" style="max-height:240px; overflow-y:auto; margin-bottom:1rem; border-bottom:1px solid var(--border); padding-bottom:0.8rem;"></div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.92rem;"><span>Subtotal (sin IVA):</span><strong id="chk-subtotal">$0.00</strong></div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.92rem;"><span>IVA (16%):</span><strong id="chk-iva">$0.00</strong></div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.4rem; font-size:0.92rem; color:var(--success);"><span>Descuento Cupón:</span><strong id="chk-descuento">-$0.00</strong></div>
+          <div style="display:flex; justify-content:space-between; margin-bottom:0.8rem; font-size:0.92rem;"><span>Costo de Envío:</span><strong id="chk-envio">$0.00</strong></div>
+          <div style="display:flex; justify-content:space-between; font-size:1.2rem; border-top:2px solid var(--border); padding-top:0.8rem; margin-bottom:1.2rem;">
+            <strong>Total a Pagar:</strong><strong id="chk-total" style="color:var(--primary);">$0.00</strong>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center; font-size:1.05rem;">Confirmar y Pagar Pedido</button>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <!-- ==================== 6. MI CUENTA / DASHBOARD ==================== -->
+  <section id="view-cuenta" class="view-section">
+    <h2 class="section-title">Mi Cuenta y Panel de Usuario</h2>
+
+    <!-- ACCESO / REGISTRO -->
+    <div id="auth-section" class="checkout-grid">
+      <div class="card-box">
+        <h3 style="margin-bottom:1rem;">Iniciar Sesión</h3>
+        <form id="login-form">
+          <div style="margin-bottom:0.8rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Correo Electrónico</label>
+            <input type="email" id="login-email" required />
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Contraseña</label>
+            <input type="password" id="login-pass" required />
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">Entrar a mi cuenta</button>
+        </form>
+      </div>
+
+      <div class="card-box">
+        <h3 style="margin-bottom:1rem;">Crear Cuenta Nueva</h3>
+        <form id="register-form">
+          <div style="margin-bottom:0.8rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Nombre Completo</label>
+            <input type="text" id="reg-nombre" required />
+          </div>
+          <div style="margin-bottom:0.8rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Correo Electrónico</label>
+            <input type="email" id="reg-email" required />
+          </div>
+          <div style="margin-bottom:1rem;">
+            <label style="font-size:0.85rem; font-weight:600;">Contraseña (mínimo 6 caracteres)</label>
+            <input type="password" id="reg-pass" minlength="6" required />
+          </div>
+          <button type="submit" class="btn-secondary" style="width:100%;">Registrarme Gratis</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- RASTREO RÁPIDO SIN INICIAR SESIÓN -->
+    <div class="card-box">
+      <h3 style="margin-bottom:0.6rem;">📦 Rastreo Rápido de Pedido (Invitados y Clientes)</h3>
+      <form id="guest-track-form" style="display:flex; gap:0.6rem; max-width:500px;">
+        <input type="text" id="track-order-input" placeholder="Ingresa tu número de pedido (ej. YOH-2026-...)" required />
+        <button type="submit" class="btn-secondary">Rastrear</button>
+      </form>
+      <div id="guest-track-result" style="margin-top:1rem;"></div>
+    </div>
+
+    <!-- DASHBOARD PRIVADO -->
+    <div id="user-dashboard" style="display:none;">
+      <div class="card-box" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.8rem;">
+        <div>
+          <h3 id="dash-user-name">Bienvenido</h3>
+          <span id="dash-user-email" style="font-size:0.88rem; color:var(--text-muted);"></span>
+        </div>
+        <button class="btn-outline" id="btn-logout">Cerrar Sesión</button>
+      </div>
+
+      <div class="dashboard-tabs">
+        <button class="tab-btn active" data-tab="pedidos">📦 Historial y Tracking</button>
+        <button class="tab-btn" data-tab="deseos">❤️ Lista de Deseos</button>
+        <button class="tab-btn" data-tab="perfil">📍 Datos y Direcciones</button>
+        <button class="tab-btn" data-tab="preferencias">🔔 Preferencias</button>
+      </div>
+
+      <div id="tab-pedidos" class="card-box dash-panel"></div>
+      <div id="tab-deseos" class="card-box dash-panel" style="display:none;"></div>
+      <div id="tab-perfil" class="card-box dash-panel" style="display:none;">
+        <h3 style="margin-bottom:1rem;">Información Personal y Dirección Predeterminada</h3>
+        <form id="profile-form">
+          <div class="form-row">
+            <div><label>Nombre Completo</label><input type="text" id="prof-nombre" /></div>
+            <div><label>Teléfono / WhatsApp</label><input type="tel" id="prof-telefono" /></div>
+          </div>
+          <div style="margin-bottom:0.9rem;"><label>Dirección de Envío</label><input type="text" id="prof-direccion" /></div>
+          <div class="form-row">
+            <div><label>Ciudad</label><input type="text" id="prof-ciudad" /></div>
+            <div><label>Código Postal</label><input type="text" id="prof-cp" maxlength="5" /></div>
+          </div>
+          <button type="submit" class="btn-primary">Guardar Datos</button>
+        </form>
+      </div>
+      <div id="tab-preferencias" class="card-box dash-panel" style="display:none;">
+        <h3 style="margin-bottom:1rem;">Preferencias de Comunicación</h3>
+        <form id="prefs-form">
+          <label style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.8rem;">
+            <input type="checkbox" id="pref-email" style="width:auto;" /> Recibir confirmaciones, facturas CFDI y promociones por correo electrónico.
+          </label>
+          <label style="display:flex; align-items:center; gap:0.6rem; margin-bottom:1rem;">
+            <input type="checkbox" id="pref-whatsapp" style="width:auto;" /> Recibir alertas de envío y recordatorios de servicio de taller por WhatsApp.
+          </label>
+          <button type="submit" class="btn-primary">Actualizar Preferencias</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. ATENCIÓN AL CLIENTE ==================== -->
+  <section id="view-soporte" class="view-section">
+    <h2 class="section-title">Centro de Ayuda y Atención al Cliente</h2>
+    <div class="checkout-grid">
+      <div>
+        <div class="card-box">
+          <h3 style="margin-bottom:1rem;">Preguntas Frecuentes (FAQ)</h3>
+          <details style="margin-bottom:0.8rem; border-bottom:1px solid var(--border); padding-bottom:0.6rem;" open>
+            <summary style="font-weight:700; cursor:pointer;">¿Cómo funciona el servicio Click & Collect en Villahermosa?</summary>
+            <p style="font-size:0.9rem; margin-top:0.4rem; color:var(--dark-700);">Al ingresar un Código Postal de Tabasco (86xxx) puedes elegir recoger tu pedido sin costo en nuestro taller MotoMaster YOH el mismo día, o solicitar instalación inmediata.</p>
+          </details>
+          <details style="margin-bottom:0.8rem; border-bottom:1px solid var(--border); padding-bottom:0.6rem;">
+            <summary style="font-weight:700; cursor:pointer;">¿Qué pasa si la refacción o talla de casco no me queda?</summary>
+            <p style="font-size:0.9rem; margin-top:0.4rem; color:var(--dark-700);">Cuentas con 15 días naturales para solicitar cambio de talla o devolución íntegra siempre que el artículo conserve su empaque y etiquetas originales.</p>
+          </details>
+          <details style="margin-bottom:0.8rem; border-bottom:1px solid var(--border); padding-bottom:0.6rem;">
+            <summary style="font-weight:700; cursor:pointer;">¿Emiten factura fiscal (CFDI 4.0)?</summary>
+            <p style="font-size:0.9rem; margin-top:0.4rem; color:var(--dark-700);">Sí, todos nuestros precios ya incluyen IVA (16%) y puedes solicitar tu factura CFDI enviando tu Constancia de Situación Fiscal junto con tu número de pedido.</p>
+          </details>
+        </div>
+
+        <div class="card-box">
+          <h3 style="margin-bottom:1rem;">Formulario de Contacto Directo</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div><label>Nombre *</label><input type="text" id="cnt-nombre" required /></div>
+              <div><label>Correo Electrónico *</label><input type="email" id="cnt-email" required /></div>
+            </div>
+            <div style="margin-bottom:0.8rem;">
+              <label>Asunto (Cotización de pieza, cita taller, garantía) *</label>
+              <input type="text" id="cnt-asunto" required />
+            </div>
+            <div style="margin-bottom:1rem;">
+              <label>Mensaje (Indica modelo y año de tu moto si buscas pieza) *</label>
+              <textarea id="cnt-mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div class="card-box">
+          <h3 style="margin-bottom:0.8rem;">🏢 Información de la Empresa</h3>
+          <p style="font-size:0.92rem; margin-bottom:0.6rem;"><strong>MotoMaster YOH — Taller y Refaccionaria</strong></p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.5rem;">📍 Villahermosa, Tabasco, México.</p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.5rem;">🕒 Lunes a Sábado: 8:30 AM – 6:30 PM</p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:1rem;">📞 Soporte Técnico y Ventas: +52 (993) 000-0000</p>
+          <hr style="border:none; border-top:1px solid var(--border); margin:1rem 0;" />
+          <h4 style="margin-bottom:0.6rem;">Documentos Legales</h4>
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <button class="btn-outline open-legal" data-doc="envios">📄 Políticas de Envío y Devolución</button>
+            <button class="btn-outline open-legal" data-doc="privacidad">🔒 Aviso de Privacidad (LFPDPPP)</button>
+            <button class="btn-outline open-legal" data-doc="terminos">⚖️ Términos y Condiciones</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. MODAL PRODUCTO INDIVIDUAL ==================== -->
+  <div id="product-modal" class="modal-backdrop">
+    <div class="modal-card">
+      <button class="modal-close" id="close-product-modal">✕</button>
+      <div class="product-detail-grid">
+        <div>
+          <div class="zoom-container" id="zoom-container">
+            <img id="modal-main-img" src="" alt="Producto" />
+          </div>
+          <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.3rem; text-align:center;">🔍 Pasa el cursor sobre la imagen para hacer zoom</p>
+          <div id="modal-thumbs" style="display:flex; gap:0.5rem; margin-top:0.6rem;"></div>
+        </div>
+
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span id="modal-brand" class="product-brand"></span>
+            <span id="modal-sku" style="font-size:0.8rem; color:var(--text-muted);"></span>
+          </div>
+          <h2 id="modal-title" style="margin:0.3rem 0;"></h2>
+          <div class="price-row">
+            <span id="modal-price" class="price-current" style="font-size:1.5rem;"></span>
+            <span id="modal-old-price" class="price-old"></span>
+          </div>
+          <p id="modal-desc" style="font-size:0.92rem; color:var(--dark-700); margin:0.8rem 0;"></p>
+
+          <div>
+            <strong id="modal-variant-label" style="font-size:0.9rem;">Selecciona opción:</strong>
+            <div id="modal-variants" class="variant-pills"></div>
+            <div id="modal-stock-badge" style="font-size:0.88rem; font-weight:700; margin-bottom:1rem;"></div>
+          </div>
+
+          <div style="display:flex; gap:0.7rem; align-items:center; margin-bottom:1.2rem;">
+            <input type="number" id="modal-qty" value="1" min="1" max="20" style="width:75px;" />
+            <button class="btn-primary" id="btn-modal-add" style="flex:1; justify-content:center;">🛒 Agregar al Carrito</button>
+            <button class="btn-outline" id="btn-modal-wish" title="Guardar en Lista de Deseos">❤️</button>
+          </div>
+
+          <h4 style="margin-bottom:0.5rem; border-top:1px solid var(--border); padding-top:0.8rem;">Especificaciones Técnicas</h4>
+          <table id="modal-specs" style="width:100%; font-size:0.86rem; border-collapse:collapse;"></table>
+        </div>
+      </div>
+
+      <!-- RESEÑAS Y CALIFICACIONES -->
+      <div style="margin-top:2rem; border-top:1px solid var(--border); padding-top:1.3rem;">
+        <h3 style="margin-bottom:0.8rem;">Reseñas y Calificaciones de Compradores</h3>
+        <div class="checkout-grid">
+          <div id="modal-reviews-list" style="max-height:220px; overflow-y:auto;"></div>
+          <form id="review-form" style="background:#f8fafc; padding:1rem; border-radius:8px;">
+            <h4 style="margin-bottom:0.6rem;">Escribir una reseña</h4>
+            <input type="text" id="rev-nombre" placeholder="Tu nombre" required style="margin-bottom:0.5rem;" />
+            <select id="rev-calificacion" style="margin-bottom:0.5rem;">
+              <option value="5">★★★★★ (5 - Excelente)</option>
+              <option value="4">★★★★☆ (4 - Muy bueno)</option>
+              <option value="3">★★★☆☆ (3 - Regular)</option>
+              <option value="2">★★☆☆☆ (2 - Malo)</option>
+              <option value="1">★☆☆☆☆ (1 - Muy malo)</option>
+            </select>
+            <textarea id="rev-comentario" rows="2" placeholder="Comparte tu experiencia con esta refacción..." required style="margin-bottom:0.5rem;"></textarea>
+            <button type="submit" class="btn-secondary" style="width:100%;">Publicar Reseña</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- PRODUCTOS RELACIONADOS -->
+      <div style="margin-top:1.8rem; border-top:1px solid var(--border); padding-top:1.2rem;">
+        <h3 style="margin-bottom:0.8rem;">Productos Relacionados</h3>
+        <div id="modal-related" class="products-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL POLÍTICAS LEGALES -->
+  <div id="legal-modal" class="modal-backdrop">
+    <div class="modal-card" style="max-width:650px;">
+      <button class="modal-close" id="close-legal-modal">✕</button>
+      <h2 id="legal-title" style="margin-bottom:0.8rem;"></h2>
+      <div id="legal-body" style="font-size:0.92rem; color:var(--dark-700); line-height:1.6;"></div>
+    </div>
+  </div>
+
+  <!-- ==================== 4. CARRITO DESLIZABLE ==================== -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>🛒 Tu Carrito</h3>
+      <button id="btn-close-cart" style="background:transparent; color:#fff; font-size:1.3rem;">✕</button>
+    </div>
+
+    <div id="cart-items-list" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <!-- Cálculo de envío por CP -->
+      <div style="display:flex; gap:0.4rem; margin-bottom:0.6rem;">
+        <input type="text" id="cart-cp" maxlength="5" placeholder="CP envío (ej. 86000)" style="padding:0.45rem 0.7rem;" />
+        <button class="btn-outline" id="btn-calc-envio" style="white-space:nowrap; padding:0.45rem 0.8rem;">Calcular Envío</button>
+      </div>
+      <div id="cart-shipping-msg" style="font-size:0.8rem; color:var(--dark-700); margin-bottom:0.6rem;"></div>
+
+      <!-- Código de descuento -->
+      <div style="display:flex; gap:0.4rem; margin-bottom:0.8rem;">
+        <input type="text" id="cart-coupon" placeholder="Cupón (ej. MOTOYOH10)" style="padding:0.45rem 0.7rem;" />
+        <button class="btn-secondary" id="btn-apply-coupon" style="padding:0.45rem 0.8rem;">Aplicar</button>
+      </div>
+
+      <div style="font-size:0.88rem; display:flex; flex-direction:column; gap:0.25rem; margin-bottom:0.8rem;">
+        <div style="display:flex; justify-content:space-between;"><span>Subtotal:</span><strong id="cart-subtotal">$0.00</strong></div>
+        <div style="display:flex; justify-content:space-between; color:var(--success);"><span>Descuento:</span><strong id="cart-discount">-$0.00</strong></div>
+        <div style="display:flex; justify-content:space-between;"><span>Envío estimado:</span><strong id="cart-shipping">$149.00</strong></div>
+        <div style="display:flex; justify-content:space-between; font-size:1.1rem; border-top:1px solid var(--border); padding-top:0.4rem;">
+          <strong>Total:</strong><strong id="cart-total" style="color:var(--primary);">$0.00</strong>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btn-go-checkout" style="width:100%; justify-content:center;">Proceder al Pago →</button>
+    </div>
+  </aside>
+
+  <!-- CHATBOT FLOTANTE -->
+  <button class="chatbot-btn" id="chatbot-toggle" title="Asistente Virtual MotoMaster">💬</button>
+  <div class="chatbot-box" id="chatbot-window">
+    <div style="background:var(--dark-900); color:#fff; padding:0.8rem 1rem; display:flex; justify-content:space-between; align-items:center;">
+      <strong>🤖 Asistente MotoMaster YOH</strong>
+      <button id="chatbot-close" style="background:transparent; color:#fff;">✕</button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg-bot">¡Hola! 👋 Soy el asistente de MotoMaster YOH. Pregúntame sobre <strong>envíos, pagos, cupones, citas de taller o garantías</strong>.</div>
+    </div>
+    <form id="chat-form" style="display:flex; border-top:1px solid var(--border);">
+      <input type="text" id="chat-input" placeholder="Escribe tu duda..." required style="border:none; border-radius:0;" />
+      <button type="submit" class="btn-primary" style="border-radius:0;">Enviar</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h4>🏍️ MotoMaster YOH</h4>
+        <p style="font-size:0.88rem;">Refaccionaria especializada y taller mecánico para motocicletas de trabajo, urbanas y deportivas en Tabasco y todo México.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul>
+          <li data-view="inicio">Inicio</li>
+          <li data-view="catalogo">Catálogo de Refacciones</li>
+          <li data-view="cuenta">Mi Cuenta y Rastreo</li>
+          <li data-view="soporte">Atención al Cliente</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Marco Legal</h4>
+        <ul>
+          <li class="open-legal" data-doc="privacidad">Aviso de Privacidad</li>
+          <li class="open-legal" data-doc="terminos">Términos y Condiciones</li>
+          <li class="open-legal" data-doc="envios">Políticas de Envío y Devolución</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center; font-size:0.82rem; color:#64748b; border-top:1px solid #1e293b; padding-top:1rem;">
+      © 2026 MotoMaster YOH. Todos los derechos reservados. Sitio protegido con SSL.
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

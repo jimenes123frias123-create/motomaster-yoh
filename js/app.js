@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const TEXTOS_LEGALES = {
     privacidad: {
       titulo: 'Aviso de Privacidad Integral (LFPDPPP)',
-      cuerpo: '<p><strong>MotoMaster YOH</strong>, con domicilio en Villahermosa, Tabasco, es responsable del tratamiento de sus datos personales (nombre, correo, teléfono y dirección de envío) recabados exclusivamente para procesar pedidos, emitir facturas CFDI y coordinar entregas.</p><p style="margin-top:0.6rem;">Usted puede ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) desde su panel de usuario o enviando un mensaje en Atención al Cliente.</p>'
+      cuerpo: '<p><strong>MotoMaster YOH</strong>, con domicilio en Jalpa de Méndez, Tabasco, Tabasco, es responsable del tratamiento de sus datos personales (nombre, correo, teléfono y dirección de envío) recabados exclusivamente para procesar pedidos, emitir facturas CFDI y coordinar entregas.</p><p style="margin-top:0.6rem;">Usted puede ejercer sus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) desde su panel de usuario o enviando un mensaje en Atención al Cliente.</p>'
     },
     envios: {
       titulo: 'Políticas de Envío y Devolución',
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else if (low.includes('pago') || low.includes('tarjeta') || low.includes('oxxo')) {
       resp = '💳 Aceptamos Tarjetas con SSL/3D Secure, transferencia SPEI inmediata, Mercado Pago y efectivo en OXXO.';
     } else if (low.includes('taller') || low.includes('cita') || low.includes('horario')) {
-      resp = '🔧 Atendemos de Lunes a Sábado de 8:30 AM a 6:30 PM en Villahermosa, Tabasco.';
+      resp = '🔧 Atendemos de Lunes a Sábado de 8:30 AM a 6:30 PM en Jalpa de Méndez, Tabasco, Tabasco.';
     }
 
     setTimeout(() => {

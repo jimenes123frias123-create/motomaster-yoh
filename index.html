@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MotoMaster YOH | Refaccionaria y Taller de Motocicletas</title>
+  <title>MotoMaster YOH | Refaccionaria y Centro de Servicio de Motocicletas</title>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
   <!-- BARRA SUPERIOR -->
   <div class="topbar">
-    <span>🏍️ Envíos a todo México y recolección gratis en taller (Villahermosa, Tabasco)</span>
-    <span>🔒 Compra Segura SSL | Cupón 10% DTO: <strong>MOTOYOH10</strong></span>
+    <span>Envíos a todo México y recolección gratis en taller (Jalpa de Méndez, Tabasco)</span>
+    <span>Compra Segura SSL | Cupón 10% DTO: <strong>MOTOYOH10</strong></span>
   </div>
 
   <!-- NAVEGACIÓN PRINCIPAL -->
   <header class="navbar">
-    <a href="#" class="brand" data-view="inicio">🏍️ MotoMaster <span>YOH</span></a>
+    <a href="#" class="brand" data-view="inicio" style="display:inline-flex; align-items:center; gap:0.6rem;">
+      <img src="yoh.jpg" alt="Logo MotoMaster YOH" style="width:42px; height:42px; border-radius:50%; object-fit:cover; border:2px solid #e11d48;" />
+      <span>MotoMaster <span>YOH</span></span>
+    </a>
 
     <div class="search-wrapper">
       <input type="text" id="global-search" placeholder="Buscar refacciones, aceites, cascos, marca o SKU..." autocomplete="off" />
@@ -29,7 +32,7 @@
       <button class="nav-btn" data-view="cuenta" id="nav-cuenta-btn">Mi Cuenta</button>
       <button class="nav-btn" data-view="soporte">Atención al Cliente</button>
       <button class="cart-trigger" id="btn-open-cart">
-        🛒 Carrito <span class="badge-count" id="cart-badge">0</span>
+        Carrito <span class="badge-count" id="cart-badge">0</span>
       </button>
     </nav>
   </header>
@@ -38,40 +41,36 @@
   <main id="view-inicio" class="view-section active">
     <section class="hero">
       <div>
-        <span class="hero-tag">REFACCIONARIA Y SERVICIO TÉCNICO ESPECIALIZADO</span>
+        <span class="hero-tag">CENTRO DE SERVICIO Y REFACCIONARIA ESPECIALIZADA</span>
         <h1>Todo para mantener tu motocicleta al máximo rendimiento</h1>
-        <p>Refacciones originales, lubricantes sintéticos, llantas y equipamiento certificado DOT con inventario en tiempo real y envío rápido.</p>
+        <p>Refacciones originales, lubricantes sintéticos, llantas y equipamiento certificado DOT con inventario en tiempo real, envío rápido y servicio mecánico profesional en Jalpa de Méndez, Tabasco.</p>
         <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
           <button class="btn-primary" data-view="catalogo">Ver Catálogo Completo</button>
           <button class="btn-outline" style="color:#fff; border-color:#475569;" data-view="soporte">Cotizar Servicio de Taller</button>
         </div>
       </div>
       <div style="background:rgba(255,255,255,0.06); padding:1.5rem; border-radius:12px; border:1px solid rgba(255,255,255,0.12);">
-        <h3 style="margin-bottom:0.6rem; color:#fda4af;">⚡ Oferta Relámpago de la Semana</h3>
+        <h3 style="margin-bottom:0.6rem; color:#fda4af;">Oferta Relámpago de la Semana</h3>
         <p style="font-size:0.92rem; margin-bottom:1rem;">Usa el código <strong>MOTOYOH10</strong> en tu carrito y obtén 10% de descuento inmediato en refacciones y lubricantes.</p>
-        <div style="font-size:0.85rem; color:#94a3b8;">✔ Envío gratis en compras mayores a $1,500 MXN<br>✔ Entrega local exprés en Tabasco (CP 86xxx)</div>
+        <div style="font-size:0.85rem; color:#94a3b8;">- Envío gratis en compras mayores a $1,500 MXN<br>- Entrega local exprés en Tabasco (CP 86xxx)</div>
       </div>
     </section>
 
     <h2 class="section-title">Categorías Principales</h2>
     <div class="categories-grid">
       <div class="cat-card" data-cat="Lubricantes y Químicos">
-        <div class="cat-icon">🛢️</div>
         <h3>Lubricantes y Químicos</h3>
         <p style="font-size:0.85rem; color:var(--text-muted);">Aceites 4T, líquidos de freno y limpiadores</p>
       </div>
       <div class="cat-card" data-cat="Equipamiento y Seguridad">
-        <div class="cat-icon">🪖</div>
         <h3>Equipamiento y Seguridad</h3>
         <p style="font-size:0.85rem; color:var(--text-muted);">Cascos certificados DOT, guantes e impermeables</p>
       </div>
       <div class="cat-card" data-cat="Llantas y Rines">
-        <div class="cat-icon">🛞</div>
         <h3>Llantas y Rines</h3>
         <p style="font-size:0.85rem; color:var(--text-muted);">Llantas deportivas, doble propósito y reparto</p>
       </div>
       <div class="cat-card" data-cat="Refacciones de Motor">
-        <div class="cat-icon">⚙️</div>
         <h3>Refacciones de Motor</h3>
         <p style="font-size:0.85rem; color:var(--text-muted);">Kits de arrastre, bujías, filtros y balatas</p>
       </div>
@@ -88,19 +87,15 @@
     <!-- ELEMENTOS DE CONFIANZA -->
     <div class="trust-bar">
       <div class="trust-item">
-        <span style="font-size:1.6rem;">🚚</span>
         <div><strong>Envíos Asegurados</strong><span>Paquetería nacional y entrega local en Tabasco</span></div>
       </div>
       <div class="trust-item">
-        <span style="font-size:1.6rem;">🛡️</span>
         <div><strong>Pago 100% Protegido</strong><span>Cifrado SSL, SPEI, Mercado Pago y OXXO</span></div>
       </div>
       <div class="trust-item">
-        <span style="font-size:1.6rem;">🔧</span>
         <div><strong>Garantía de Taller</strong><span>Piezas verificadas por mecánicos expertos</span></div>
       </div>
       <div class="trust-item">
-        <span style="font-size:1.6rem;">↩️</span>
         <div><strong>Devolución Fácil</strong><span>Cambios sin costo por talla o compatibilidad</span></div>
       </div>
     </div>
@@ -110,7 +105,7 @@
     <div class="categories-grid">
       <div class="card-box" style="margin:0;">
         <div style="color:var(--accent); margin-bottom:0.4rem;">★★★★★</div>
-        <p style="font-size:0.9rem; margin-bottom:0.6rem;">"Pedí mi kit de arrastre y aceite Motul en la mañana y pasé a recogerlo al taller en Villahermosa sin hacer fila."</p>
+        <p style="font-size:0.9rem; margin-bottom:0.6rem;">"Pedí mi kit de arrastre y aceite Motul en la mañana y pasé a recogerlo al taller en Jalpa de Méndez sin hacer fila."</p>
         <strong style="font-size:0.85rem;">— Carlos M. (Repartidor DiDi Moto)</strong>
       </div>
       <div class="card-box" style="margin:0;">
@@ -128,7 +123,7 @@
     <!-- NEWSLETTER SIGNUP -->
     <div class="card-box" style="background:var(--dark-900); color:#fff; margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
       <div>
-        <h3 style="margin-bottom:0.3rem;">📩 Únete al Club MotoMaster YOH</h3>
+        <h3 style="margin-bottom:0.3rem;">Únete al Club MotoMaster YOH</h3>
         <p style="font-size:0.9rem; color:#cbd5e1;">Recibe promociones exclusivas, recordatorios de afinación y cupones de descuento.</p>
       </div>
       <form id="newsletter-form" style="display:flex; gap:0.5rem; flex:1; max-width:420px;">
@@ -223,23 +218,23 @@
           <div class="form-row">
             <div>
               <label style="font-size:0.85rem; font-weight:600;">Teléfono / WhatsApp *</label>
-              <input type="tel" id="chk-telefono" required placeholder="993 000 0000" />
+              <input type="tel" id="chk-telefono" required placeholder="993 188 8845" />
             </div>
             <div>
               <label style="font-size:0.85rem; font-weight:600;">Código Postal *</label>
-              <input type="text" id="chk-cp" maxlength="5" required placeholder="86000" />
+              <input type="text" id="chk-cp" maxlength="5" required placeholder="86200" />
             </div>
           </div>
           <div style="margin-bottom:0.9rem;">
             <label style="font-size:0.85rem; font-weight:600;">Dirección Completa (Calle, Número, Colonia, Ciudad, Estado) *</label>
-            <input type="text" id="chk-direccion" required placeholder="Av. Universidad #120, Col. Magisterial, Villahermosa, Tabasco" />
+            <input type="text" id="chk-direccion" required placeholder="Prolongación de Gregorio Méndez, Barrio San Luis, Jalpa de Méndez, Tabasco" />
           </div>
           <div>
             <label style="font-size:0.85rem; font-weight:600;">Modalidad de Entrega</label>
             <select id="chk-envio-tipo">
               <option value="Estándar Nacional ($149)">Envío Estándar Nacional Paquetería ($149.00 MXN)</option>
-              <option value="Local Tabasco ($60)">Envío Exprés Local Villahermosa / Tabasco ($60.00 MXN)</option>
-              <option value="Click & Collect Taller ($0)">Recoger en Taller MotoMaster YOH - Villahermosa ($0.00 MXN)</option>
+              <option value="Local Tabasco ($60)">Envío Exprés Local Jalpa de Méndez / Tabasco ($60.00 MXN)</option>
+              <option value="Click & Collect Taller ($0)">Recoger en Taller MotoMaster YOH - Barrio San Luis, Jalpa de Méndez ($0.00 MXN)</option>
             </select>
           </div>
         </div>
@@ -248,22 +243,22 @@
           <h3 style="margin-bottom:1rem;">2. Método de Pago Seguro (SSL / PCI-DSS)</h3>
           <label class="payment-option">
             <input type="radio" name="metodo_pago" value="Tarjeta Crédito/Débito (SSL / 3D Secure)" checked />
-            <span>💳 <strong>Tarjeta de Crédito o Débito</strong> (Cifrado SSL + Autenticación 3D Secure)</span>
+            <span><strong>Tarjeta de Crédito o Débito</strong> (Cifrado SSL + Autenticación 3D Secure)</span>
           </label>
           <label class="payment-option">
             <input type="radio" name="metodo_pago" value="Transferencia Electrónica SPEI" />
-            <span>🏦 <strong>Transferencia Bancaria SPEI</strong> (Acreditación inmediata sin comisión)</span>
+            <span><strong>Transferencia Bancaria SPEI</strong> (Acreditación inmediata sin comisión)</span>
           </label>
           <label class="payment-option">
             <input type="radio" name="metodo_pago" value="Mercado Pago Checkout" />
-            <span>🤝 <strong>Mercado Pago</strong> (Saldo, tarjetas y meses sin intereses)</span>
+            <span><strong>Mercado Pago</strong> (Saldo, tarjetas y meses sin intereses)</span>
           </label>
           <label class="payment-option">
             <input type="radio" name="metodo_pago" value="Pago en Efectivo OXXO" />
-            <span>🏪 <strong>Pago en Efectivo en Tiendas OXXO</strong> (Referencia digital instantánea)</span>
+            <span><strong>Pago en Efectivo en Tiendas OXXO</strong> (Referencia digital instantánea)</span>
           </label>
           <div id="payment-details-box" style="background:#f8fafc; padding:0.9rem; border-radius:8px; font-size:0.88rem; color:var(--dark-700); margin-top:0.6rem;">
-            🔒 Serás conectado mediante túnel cifrado TLS 1.3. MotoMaster YOH nunca almacena los dígitos de tu tarjeta.
+            Serás conectado mediante túnel cifrado TLS 1.3. MotoMaster YOH nunca almacena los dígitos de tu tarjeta.
           </div>
         </div>
 
@@ -336,7 +331,7 @@
 
     <!-- RASTREO RÁPIDO SIN INICIAR SESIÓN -->
     <div class="card-box">
-      <h3 style="margin-bottom:0.6rem;">📦 Rastreo Rápido de Pedido (Invitados y Clientes)</h3>
+      <h3 style="margin-bottom:0.6rem;">Rastreo Rápido de Pedido (Invitados y Clientes)</h3>
       <form id="guest-track-form" style="display:flex; gap:0.6rem; max-width:500px;">
         <input type="text" id="track-order-input" placeholder="Ingresa tu número de pedido (ej. YOH-2026-...)" required />
         <button type="submit" class="btn-secondary">Rastrear</button>
@@ -355,10 +350,10 @@
       </div>
 
       <div class="dashboard-tabs">
-        <button class="tab-btn active" data-tab="pedidos">📦 Historial y Tracking</button>
-        <button class="tab-btn" data-tab="deseos">❤️ Lista de Deseos</button>
-        <button class="tab-btn" data-tab="perfil">📍 Datos y Direcciones</button>
-        <button class="tab-btn" data-tab="preferencias">🔔 Preferencias</button>
+        <button class="tab-btn active" data-tab="pedidos">Historial y Tracking</button>
+        <button class="tab-btn" data-tab="deseos">Lista de Deseos</button>
+        <button class="tab-btn" data-tab="perfil">Datos y Direcciones</button>
+        <button class="tab-btn" data-tab="preferencias">Preferencias</button>
       </div>
 
       <div id="tab-pedidos" class="card-box dash-panel"></div>
@@ -401,8 +396,8 @@
         <div class="card-box">
           <h3 style="margin-bottom:1rem;">Preguntas Frecuentes (FAQ)</h3>
           <details style="margin-bottom:0.8rem; border-bottom:1px solid var(--border); padding-bottom:0.6rem;" open>
-            <summary style="font-weight:700; cursor:pointer;">¿Cómo funciona el servicio Click & Collect en Villahermosa?</summary>
-            <p style="font-size:0.9rem; margin-top:0.4rem; color:var(--dark-700);">Al ingresar un Código Postal de Tabasco (86xxx) puedes elegir recoger tu pedido sin costo en nuestro taller MotoMaster YOH el mismo día, o solicitar instalación inmediata.</p>
+            <summary style="font-weight:700; cursor:pointer;">¿Cómo funciona el servicio Click &amp; Collect en Jalpa de Méndez, Tabasco?</summary>
+            <p style="font-size:0.9rem; margin-top:0.4rem; color:var(--dark-700);">Al ingresar un Código Postal de Tabasco (86xxx) puedes elegir recoger tu pedido sin costo en nuestro taller MotoMaster YOH ubicado en Prolongación de Gregorio Méndez, Barrio San Luis, Jalpa de Méndez, o solicitar instalación inmediata.</p>
           </details>
           <details style="margin-bottom:0.8rem; border-bottom:1px solid var(--border); padding-bottom:0.6rem;">
             <summary style="font-weight:700; cursor:pointer;">¿Qué pasa si la refacción o talla de casco no me queda?</summary>
@@ -436,17 +431,45 @@
 
       <div>
         <div class="card-box">
-          <h3 style="margin-bottom:0.8rem;">🏢 Información de la Empresa</h3>
-          <p style="font-size:0.92rem; margin-bottom:0.6rem;"><strong>MotoMaster YOH — Taller y Refaccionaria</strong></p>
-          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.5rem;">📍 Villahermosa, Tabasco, México.</p>
-          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.5rem;">🕒 Lunes a Sábado: 8:30 AM – 6:30 PM</p>
-          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:1rem;">📞 Soporte Técnico y Ventas: +52 (993) 188-8845</p>
+          <div style="display:flex; align-items:center; gap:0.9rem; margin-bottom:1rem;">
+            <img src="yoh.jpg" alt="Centro de Servicio MotoMaster YOH" style="width:68px; height:68px; border-radius:50%; object-fit:cover; border:2px solid #e11d48;" />
+            <div>
+              <h3 style="margin:0; font-size:1.15rem;">Centro de Servicio MotoMaster YOH</h3>
+              <span style="font-size:0.82rem; color:var(--text-muted);">Taller de reparación de motocicletas y refaccionaria • Tu moto, nuestra pasión</span>
+            </div>
+          </div>
+
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.6rem; line-height:1.5;">
+            <strong>Dirección:</strong> Prolongación de Gregorio Méndez, Barrio San Luis, Jalpa de Méndez, Tabasco.
+          </p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.6rem; line-height:1.5;">
+            <strong>Referencias:</strong> Se encuentra a unos metros de las oficinas de la Comisión Federal de Electricidad (CFE), antes de llegar a la Notaría 3.
+          </p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.6rem; line-height:1.5;">
+            <strong>Horario de atención:</strong> Lunes a sábado de 9:00 a.m. a 8:00 p.m. (cerrado los domingos).
+          </p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:0.6rem; line-height:1.5;">
+            <strong>Servicios:</strong> Mantenimiento general, diagnóstico, inyección electrónica y reparación profesional para motocicletas.
+          </p>
+          <p style="font-size:0.88rem; color:var(--dark-700); margin-bottom:1rem;">
+            <strong>Teléfono y WhatsApp:</strong> <a href="tel:+529931888845" style="color:var(--primary); font-weight:700;">+52 (993) 188-8845</a>
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:0.5rem; margin-bottom:1rem;">
+            <a href="https://www.facebook.com/MotomasterYOH" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background:#1877f2; justify-content:center; text-decoration:none;">
+              Página oficial en Facebook: MotoMaster YOH
+            </a>
+            <a href="https://wa.me/529931888845?text=Hola%20MotoMaster%20YOH,%20quisiera%20informaci%C3%B3n%20sobre%20refacciones%20o%20servicio%20de%20taller" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="background:#16a34a; justify-content:center; text-decoration:none; text-align:center;">
+              Enviar mensaje directo por WhatsApp
+            </a>
+          </div>
+
           <hr style="border:none; border-top:1px solid var(--border); margin:1rem 0;" />
           <h4 style="margin-bottom:0.6rem;">Documentos Legales</h4>
           <div style="display:flex; flex-direction:column; gap:0.5rem;">
-            <button class="btn-outline open-legal" data-doc="envios">📄 Políticas de Envío y Devolución</button>
-            <button class="btn-outline open-legal" data-doc="privacidad">🔒 Aviso de Privacidad (LFPDPPP)</button>
-            <button class="btn-outline open-legal" data-doc="terminos">⚖️ Términos y Condiciones</button>
+            <button class="btn-outline open-legal" data-doc="envios">Políticas de Envío y Devolución</button>
+            <button class="btn-outline open-legal" data-doc="privacidad">Aviso de Privacidad (LFPDPPP)</button>
+            <button class="btn-outline open-legal" data-doc="terminos">Términos y Condiciones</button>
           </div>
         </div>
       </div>
@@ -462,7 +485,7 @@
           <div class="zoom-container" id="zoom-container">
             <img id="modal-main-img" src="" alt="Producto" />
           </div>
-          <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.3rem; text-align:center;">🔍 Pasa el cursor sobre la imagen para hacer zoom</p>
+          <p style="font-size:0.78rem; color:var(--text-muted); margin-top:0.3rem; text-align:center;">Pasa el cursor sobre la imagen para hacer zoom</p>
           <div id="modal-thumbs" style="display:flex; gap:0.5rem; margin-top:0.6rem;"></div>
         </div>
 
@@ -486,8 +509,8 @@
 
           <div style="display:flex; gap:0.7rem; align-items:center; margin-bottom:1.2rem;">
             <input type="number" id="modal-qty" value="1" min="1" max="20" style="width:75px;" />
-            <button class="btn-primary" id="btn-modal-add" style="flex:1; justify-content:center;">🛒 Agregar al Carrito</button>
-            <button class="btn-outline" id="btn-modal-wish" title="Guardar en Lista de Deseos">❤️</button>
+            <button class="btn-primary" id="btn-modal-add" style="flex:1; justify-content:center;">Agregar al Carrito</button>
+            <button class="btn-outline" id="btn-modal-wish" title="Guardar en Lista de Deseos">Guardar</button>
           </div>
 
           <h4 style="margin-bottom:0.5rem; border-top:1px solid var(--border); padding-top:0.8rem;">Especificaciones Técnicas</h4>
@@ -536,7 +559,7 @@
   <!-- ==================== 4. CARRITO DESLIZABLE ==================== -->
   <aside id="cart-drawer" class="cart-drawer">
     <div class="cart-header">
-      <h3>🛒 Tu Carrito</h3>
+      <h3>Tu Carrito</h3>
       <button id="btn-close-cart" style="background:transparent; color:#fff; font-size:1.3rem;">✕</button>
     </div>
 
@@ -545,7 +568,7 @@
     <div class="cart-footer">
       <!-- Cálculo de envío por CP -->
       <div style="display:flex; gap:0.4rem; margin-bottom:0.6rem;">
-        <input type="text" id="cart-cp" maxlength="5" placeholder="CP envío (ej. 86000)" style="padding:0.45rem 0.7rem;" />
+        <input type="text" id="cart-cp" maxlength="5" placeholder="CP envío (ej. 86200)" style="padding:0.45rem 0.7rem;" />
         <button class="btn-outline" id="btn-calc-envio" style="white-space:nowrap; padding:0.45rem 0.8rem;">Calcular Envío</button>
       </div>
       <div id="cart-shipping-msg" style="font-size:0.8rem; color:var(--dark-700); margin-bottom:0.6rem;"></div>
@@ -570,14 +593,14 @@
   </aside>
 
   <!-- CHATBOT FLOTANTE -->
-  <button class="chatbot-btn" id="chatbot-toggle" title="Asistente Virtual MotoMaster">💬</button>
+  <button class="chatbot-btn" id="chatbot-toggle" title="Asistente Virtual MotoMaster" style="font-size:0.85rem; font-weight:700;">Chat</button>
   <div class="chatbot-box" id="chatbot-window">
     <div style="background:var(--dark-900); color:#fff; padding:0.8rem 1rem; display:flex; justify-content:space-between; align-items:center;">
-      <strong>🤖 Asistente MotoMaster YOH</strong>
+      <strong>Asistente MotoMaster YOH</strong>
       <button id="chatbot-close" style="background:transparent; color:#fff;">✕</button>
     </div>
     <div class="chat-messages" id="chat-messages">
-      <div class="msg-bot">¡Hola! 👋 Soy el asistente de MotoMaster YOH. Pregúntame sobre <strong>envíos, pagos, cupones, citas de taller o garantías</strong>.</div>
+      <div class="msg-bot">¡Hola! Soy el asistente de MotoMaster YOH. Pregúntame sobre <strong>envíos, pagos, cupones, citas de taller en Jalpa de Méndez o garantías</strong>.</div>
     </div>
     <form id="chat-form" style="display:flex; border-top:1px solid var(--border);">
       <input type="text" id="chat-input" placeholder="Escribe tu duda..." required style="border:none; border-radius:0;" />
@@ -589,8 +612,13 @@
   <footer>
     <div class="footer-grid">
       <div>
-        <h4>🏍️ MotoMaster YOH</h4>
-        <p style="font-size:0.88rem;">Refaccionaria especializada y taller mecánico para motocicletas de trabajo, urbanas y deportivas en Tabasco y todo México.</p>
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:0.6rem;">
+          <img src="yoh.jpg" alt="Logo MotoMaster YOH" style="width:38px; height:38px; border-radius:50%; object-fit:cover; border:2px solid #e11d48;" />
+          <h4 style="margin:0;">MotoMaster YOH</h4>
+        </div>
+        <p style="font-size:0.86rem; margin-bottom:0.5rem;">Refaccionaria especializada y taller mecánico en Prolongación de Gregorio Méndez, Barrio San Luis, Jalpa de Méndez, Tabasco.</p>
+        <p style="font-size:0.85rem; margin-bottom:0.5rem;">Tel: +52 (993) 188-8845 | Lun–Sáb 9:00 a.m. – 8:00 p.m.</p>
+        <a href="https://www.facebook.com/MotomasterYOH" target="_blank" rel="noopener noreferrer" style="color:#60a5fa; font-size:0.86rem; text-decoration:underline;">Facebook Oficial: MotoMaster YOH</a>
       </div>
       <div>
         <h4>Navegación</h4>
@@ -611,7 +639,7 @@
       </div>
     </div>
     <div style="text-align:center; font-size:0.82rem; color:#64748b; border-top:1px solid #1e293b; padding-top:1rem;">
-      © 2026 MotoMaster YOH. Todos los derechos reservados. Sitio protegido con SSL.
+      © 2026 Centro de Servicio MotoMaster YOH — Jalpa de Méndez, Tabasco. Todos los derechos reservados. Sitio protegido con SSL.
     </div>
   </footer>
 

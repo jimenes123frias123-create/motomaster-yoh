@@ -130,7 +130,7 @@ async function actualizarEstadoUsuario() {
     document.getElementById('prof-nombre').value = perfil.nombre_completo || '';
     document.getElementById('prof-telefono').value = perfil.telefono || '';
     document.getElementById('prof-direccion').value = perfil.direccion || '';
-    document.getElementById('prof-ciudad').value = perfil.ciudad || 'Villahermosa';
+    document.getElementById('prof-ciudad').value = perfil.ciudad || 'Jalpa de Méndez, Tabasco';
     document.getElementById('prof-cp').value = perfil.codigo_postal || '';
     document.getElementById('pref-email').checked = perfil.pref_email ?? true;
     document.getElementById('pref-whatsapp').checked = perfil.pref_whatsapp ?? true;
